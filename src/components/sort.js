@@ -18,12 +18,18 @@ const createSortTemplate = () => {
 
 
 export default class Sort extends AbstractComponent {
+  constructor() {
+    super();
+
+    this._currenSortType = SortType.DEFAULT;
+  }
+
   getTemplate() {
     return createSortTemplate();
   }
 
   getSortType() {
-
+    return this._currenSortType;
   }
 
   setSortTypeChangeHandler(handler) {
