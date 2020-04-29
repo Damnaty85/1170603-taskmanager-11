@@ -118,19 +118,12 @@ export default class BoardController {
     renderTasks(taskListElement, tasks.slice(0, showingTasksCount));
     renderLoadMoreButton();
 
-    renderLoadMoreButton();
-
     this._sortComponent.setSortTypeChangeHandler((sortType) => {
       showingTasksCount = SHOWING_TASKS_COUNT_BY_BUTTON;
 
       const sortedTasks = getSortedTasks(tasks, sortType, 0, showingTasksCount);
 
       taskListElement.innerHTML = ``;
-
-      sortedTasks.slice(0, showingTasksCount)
-        .forEach((task) => {
-          renderTask(taskListElement, task);
-        });
 
       renderTasks(taskListElement, sortedTasks);
       renderLoadMoreButton();
