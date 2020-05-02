@@ -1,4 +1,4 @@
-import {COLORS} from "../const";
+import {COLORS} from "../const.js";
 
 const DescriptionItems = [
   `Изучить теорию`,
@@ -15,6 +15,7 @@ const DefaultRepeatingDays = {
   "sa": false,
   "su": false,
 };
+
 
 const getRandomArrayItem = (array) => {
   const randomIndex = getRandomIntegerNumber(0, array.length);
